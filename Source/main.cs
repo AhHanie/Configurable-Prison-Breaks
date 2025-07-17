@@ -48,11 +48,11 @@ namespace PrisonBreaks
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.Label("Threshold for prison break: " + settings.getlevel());
-            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Extreme + 1, "Never");
-            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Minor, "Minor");
-            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Major, "Major");
-            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Extreme, "Extreme");
+            listingStandard.Label($"{"SK_PrisonBreaks_PawnBreakThresholdLabel".Translate()}: " + settings.getlevel());
+            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Extreme + 1, "SK_PrisonBreaks_NeverButton".Translate());
+            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Minor, "SK_PrisonBreaks_MinorButton".Translate());
+            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Major, "SK_PrisonBreaks_MajorButton".Translate());
+            listingStandard.IntSetter(ref settings.val, (int)MoodThreshold.Extreme, "SK_PrisonBreaks_ExtremeButton".Translate());
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }

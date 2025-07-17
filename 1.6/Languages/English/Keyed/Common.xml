@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+    <SK_PrisonBreaks_PawnBreakThresholdLabel>Threshold for prison break</SK_PrisonBreaks_PawnBreakThresholdLabel>
+    <SK_PrisonBreaks_NeverButton>Never</SK_PrisonBreaks_NeverButton>
+    <SK_PrisonBreaks_MinorButton>Minor</SK_PrisonBreaks_MinorButton>
+    <SK_PrisonBreaks_MajorButton>Major</SK_PrisonBreaks_MajorButton>
+    <SK_PrisonBreaks_ExtremeButton>Extreme</SK_PrisonBreaks_ExtremeButton>
+</LanguageData>
