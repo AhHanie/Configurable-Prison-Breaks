@@ -82,9 +82,6 @@ namespace PrisonBreaks
                 if ((int)MoodThresholdExtensions.CurrentMoodThresholdFor(pawn) < LoadedModManager.GetMod<PrisonBreaks>().GetSettings<PrisonBreaksSettings>().val)
                 {
                     __result = false;
-#if DEBUG
-                    Log.Message("patching prison break for: " + pawn.Name.ToString());
-#endif
                     return false;
                 }
                 return true;

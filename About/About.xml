@@ -14,5 +14,5 @@
   </modDependencies>
 	<packageId>com.lessprisonbreaks</packageId>
 	<description>Allows prison breaks to be disabled completely or configured based on mental break threshold, default setting disables prison breaks when a pawn is happy (no mental break risk)</description>
-  <modVersion>1.2.1</modVersion>
+  <modVersion>1.2.2</modVersion>
 </ModMetaData>
