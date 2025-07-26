@@ -41,7 +41,9 @@ namespace PrisonBreaks
 
         public PrisonBreaks(ModContentPack content) : base(content)
         {
-            this.settings = GetSettings<PrisonBreaksSettings>();
+            var harmony = new Harmony("com.lessprisonbreaks");
+            HarmonyPatcher.instance = harmony;
+            LongEventHandler.QueueLongEvent(Init, "SK.PrisonBreaks.Init", true, null);
         }
 
         public override async void DoSettingsWindowContents(Rect inRect)
@@ -61,31 +63,11 @@ namespace PrisonBreaks
         {
             return "Configurable Prison Breaks";
         }
-    }
 
-    [StaticConstructorOnStartup]
-    public static class PrisonBreakPatch
-    {
-        static PrisonBreakPatch()
+        public void Init()
         {
-            var harmony = new Harmony("com.lessprisonbreaks");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
-            Log.Message("Configureable Prison breaks loaded");
-        }
-
-        [HarmonyPatch(typeof(PrisonBreakUtility), nameof(PrisonBreakUtility.CanParticipateInPrisonBreak))]
-        class Patch
-        {
-            [HarmonyPrefix]
-            static bool Prefix(ref bool __result, Pawn pawn)
-            {
-                if ((int)MoodThresholdExtensions.CurrentMoodThresholdFor(pawn) < LoadedModManager.GetMod<PrisonBreaks>().GetSettings<PrisonBreaksSettings>().val)
-                {
-                    __result = false;
-                    return false;
-                }
-                return true;
-            }
+            this.settings = GetSettings<PrisonBreaksSettings>();
+            HarmonyPatcher.PatchVanillaMethods();
         }
     }
 }
