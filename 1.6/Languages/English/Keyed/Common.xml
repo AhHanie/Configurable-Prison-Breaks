@@ -6,4 +6,10 @@
     <SK_PrisonBreaks_MinorButton>Minor</SK_PrisonBreaks_MinorButton>
     <SK_PrisonBreaks_MajorButton>Major</SK_PrisonBreaks_MajorButton>
     <SK_PrisonBreaks_ExtremeButton>Extreme</SK_PrisonBreaks_ExtremeButton>
+    <SK_PrisonBreaks_CompatibilitySectionTitle>Harmony compatibility</SK_PrisonBreaks_CompatibilitySectionTitle>
+    <SK_PrisonBreaks_CompatibilityOkStatus>No other Harmony patches detected on prison break eligibility.</SK_PrisonBreaks_CompatibilityOkStatus>
+    <SK_PrisonBreaks_CompatibilityConflictStatus>Potential compatibility conflict: {0} other Harmony owner(s) also patch prison break eligibility.</SK_PrisonBreaks_CompatibilityConflictStatus>
+    <SK_PrisonBreaks_CompatibilityConflictDetail>Other owners: {0}</SK_PrisonBreaks_CompatibilityConflictDetail>
+    <SK_PrisonBreaks_CompatibilityUnavailable>Compatibility status unavailable.</SK_PrisonBreaks_CompatibilityUnavailable>
+    <SK_PrisonBreaks_UnknownOwner>Unknown</SK_PrisonBreaks_UnknownOwner>
 </LanguageData>
